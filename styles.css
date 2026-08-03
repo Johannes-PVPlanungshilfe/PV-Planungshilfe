@@ -1,0 +1,51 @@
+:root{--green:#28702f;--dark:#172126;--muted:#526066;--soft:#f5f7f3;--line:#e1e7df;--wrap:min(1180px,calc(100% - 40px))}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--dark);line-height:1.65;background:#fff}a{color:inherit}.wrap{width:var(--wrap);margin:auto}.header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.logo{display:flex;gap:12px;align-items:center;text-decoration:none}.logo-icon{width:44px;height:44px;border:2px solid #6b9d37;display:grid;place-items:center;border-radius:10px;color:var(--green);font-size:25px}.logo span:last-child{display:flex;flex-direction:column;line-height:1.2}.logo b{font-size:16px}.logo small{font-size:12px;color:var(--muted)}nav{display:flex;align-items:center;gap:30px}nav a{text-decoration:none;font-size:14px;font-weight:650}.menu{display:none;border:0;background:none;font-size:26px}.cta{display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#2e7935,#1f5d27);color:#fff;text-decoration:none;border:0;border-radius:6px;padding:14px 22px;font-weight:750;box-shadow:0 10px 22px rgba(41,112,47,.18)}.cta.small{padding:11px 16px}.hero{background:linear-gradient(90deg,#fff 0%,#fff 43%,#f4f6f3 43%,#eef2ed 100%)}.hero-grid{min-height:650px;display:grid;grid-template-columns:1.05fr .95fr;align-items:stretch}.hero-copy{padding:72px 50px 68px 0;display:flex;flex-direction:column;justify-content:center}.kicker{font-size:13px;letter-spacing:.08em;font-weight:800;color:var(--green);margin:0 0 12px}h1{font-size:clamp(40px,5vw,66px);line-height:1.05;letter-spacing:-.045em;margin:0 0 24px;max-width:760px}h2{font-size:clamp(30px,3.6vw,48px);line-height:1.12;letter-spacing:-.035em;margin:0 0 20px}h3{font-size:22px;line-height:1.2;margin:0 0 14px}.lead{font-size:18px;color:#344149;max-width:720px}.trust{display:flex;gap:24px;flex-wrap:wrap;margin:24px 0 28px;font-size:14px;font-weight:700}.trust span{display:flex;gap:8px;align-items:center}.trust span::first-letter{color:var(--green)}.actions{display:flex;gap:24px;align-items:center}.ghost{color:var(--green);font-weight:750;text-decoration:none}.hero-image{background-image:linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.2) 30%,transparent 55%),url('assets/hero-house.webp');background-size:cover;background-position:center;min-height:650px}.section{padding:86px 0}.cards{display:grid;gap:0}.three{grid-template-columns:1fr 1fr .82fr;border:1px solid var(--line);border-radius:18px;overflow:hidden}.card{padding:34px 30px;background:#fff;border-right:1px solid var(--line)}.card:last-child{border-right:0}.card p{color:var(--muted)}.card ul{list-style:none;padding:0;margin:26px 0 0}.card li{margin:10px 0}.card li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}.icon{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:#eef5e9;color:var(--green);font-size:24px;margin-bottom:18px}.brand-card{display:flex;flex-direction:column;justify-content:center}.victron{font-size:28px;font-weight:900;color:#111;text-transform:lowercase;margin-bottom:32px}.victron:before{content:"◉ ";color:#2f8ed4}.small-note{font-size:14px}.about{background:#fff}.about-grid{display:grid;grid-template-columns:1.15fr .55fr .8fr;gap:46px;align-items:center}.about p{color:var(--muted)}.portrait{width:100%;max-width:260px;aspect-ratio:.83;object-fit:cover;border-radius:16px;justify-self:center}.speciality{margin-top:44px;border:1px solid #dfe6da;border-radius:12px;padding:18px 22px;display:grid;grid-template-columns:1.5fr repeat(4,.72fr);gap:18px;align-items:center;background:#fbfcfa}.speciality p{margin:4px 0 0;font-size:13px}.speciality span{font-size:13px;color:#334038;text-align:center}.soft{background:var(--soft)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:42px}.steps>div{border-top:2px solid var(--green);padding-top:20px}.steps b{color:var(--green);font-size:13px;letter-spacing:.1em}.steps p{color:var(--muted)}.region{background:#f4f0e8}.region-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:center;gap:60px}.region-grid p{color:var(--muted);font-size:18px}.radius{width:260px;height:260px;border-radius:50%;border:1px solid rgba(40,112,47,.35);box-shadow:inset 0 0 0 30px rgba(40,112,47,.06),0 0 0 24px rgba(40,112,47,.04);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;margin:auto}.radius strong{font-size:42px;color:var(--green)}.radius span{color:var(--muted)}.faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:70px}.faq details{border-top:1px solid var(--line);padding:20px 0}.faq details:last-child{border-bottom:1px solid var(--line)}summary{font-size:18px;font-weight:750;cursor:pointer}.faq p{color:var(--muted)}.contact{background:#102922;color:#fff}.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px}.contact p{color:#c7d3ce}.contact a{color:#fff}.light{color:#9dd3b2}.contact form{background:#fff;color:var(--dark);padding:30px;border-radius:16px;display:grid;gap:14px}.contact label{font-size:14px;font-weight:700}.contact input,.contact select,.contact textarea{width:100%;padding:12px 13px;border:1px solid #ced8d2;border-radius:8px;margin-top:6px;font:inherit}.check{display:flex;gap:9px;align-items:flex-start;font-weight:500!important;font-size:13px!important}.check input{width:auto;margin-top:4px}footer{background:#071d17;color:#dce6e1;padding:50px 0}.footer-grid{display:grid;grid-template-columns:1.5fr .7fr 1fr .7fr;gap:38px}.footer-grid>div{display:flex;flex-direction:column;gap:8px}.footer-grid p,.footer-grid a{color:#99afa5;text-decoration:none;font-size:14px}
+@media(max-width:900px){nav{display:none;position:absolute;top:78px;left:20px;right:20px;background:#fff;padding:18px;border:1px solid var(--line);border-radius:12px;flex-direction:column;align-items:stretch}nav.open{display:flex}.menu{display:block}.hero{background:#fff}.hero-grid,.about-grid,.region-grid,.faq-grid,.contact-grid{grid-template-columns:1fr}.hero-copy{padding:58px 0}.hero-image{min-height:420px}.three{grid-template-columns:1fr}.card{border-right:0;border-bottom:1px solid var(--line)}.card:last-child{border-bottom:0}.speciality{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1180px)}.logo small{display:none}.hero-grid{min-height:auto}h1{font-size:42px}.hero-image{min-height:330px}.trust,.actions{flex-direction:column;align-items:flex-start}.section{padding:64px 0}.about-grid{gap:28px}.portrait{max-width:220px}.speciality,.steps,.footer-grid{grid-template-columns:1fr}.contact form{padding:22px}}
+
+/* Version 3.1: Victron-Wortzeichen und dezente Bereichs-Icons */
+.victron-logo-link{display:inline-flex;align-self:flex-start;margin:0 0 30px;text-decoration:none}
+.victron-logo{display:block;width:min(100%,230px);height:auto}
+.speciality-intro{min-width:0}
+.speciality-item{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;min-width:0}
+.speciality-item>span:last-child{font-size:13px;color:#334038;line-height:1.35}
+.mini-icon,.step-icon{display:grid;place-items:center;color:var(--green);background:#eef5e9;border:1px solid #dce9d8;border-radius:50%;flex:0 0 auto}
+.mini-icon{width:42px;height:42px}
+.step-icon{width:46px;height:46px}
+.mini-icon svg,.step-icon svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.step-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.steps>div{border-top:0;padding:24px;border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 8px 26px rgba(23,33,38,.04)}
+.steps b{padding:5px 9px;border-radius:999px;background:#eef5e9}
+@media(max-width:900px){.speciality{grid-template-columns:1fr 1fr}.speciality-intro{grid-column:1/-1}.victron-logo{width:210px}}
+@media(max-width:560px){.speciality{grid-template-columns:1fr}.speciality-intro{grid-column:auto}.speciality-item{flex-direction:row;text-align:left}.speciality-item>span:last-child{text-align:left}.victron-logo{width:190px}}
+
+.hidden-field{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
+
+/* Formspree-Kontaktformular */
+.check{color:#315f9b}
+.check a{color:#1f5fae;font-weight:750;text-decoration:underline;text-underline-offset:2px}
+.check a:hover{color:#16477f}
+.form-status{min-height:1.5em;margin:2px 0 0;font-size:14px;font-weight:700}
+.form-status.success{color:#236b35}
+.form-status.error{color:#a52b2b}
+.contact button[disabled]{opacity:.65;cursor:wait}
+
+
+/* Formularstatus und barrierearme Rückmeldung */
+.contact form.is-sending{opacity:.88}
+.contact form button[disabled]{cursor:wait;filter:saturate(.75)}
+.form-status{display:none;border-radius:8px;padding:12px 14px;margin:4px 0 0}
+.form-status:not(:empty){display:block}
+.form-status.success{color:#174f28;background:#eaf6ed;border:1px solid #b9ddc1}
+.form-status.error{color:#7b1f1f;background:#fff0f0;border:1px solid #e6bcbc}
+
+/* Finaler Start: persönliches Porträt wieder dezent und kleiner darstellen */
+.portrait{max-width:200px}
+@media(max-width:560px){.portrait{max-width:180px}}
+
+/* Finale Korrektur: Porträt im Über-mich-Bereich sichtbar kleiner */
+.about-grid .portrait.portrait-small{width:150px!important;max-width:150px!important;height:auto!important;aspect-ratio:auto!important;object-fit:cover;justify-self:center}
+@media(max-width:560px){.about-grid .portrait.portrait-small{width:130px!important;max-width:130px!important}}
+
+/* Brand and legal pages */
+.brand-logo img{display:block;width:min(390px,46vw);height:auto}.nav .brand-logo{flex:0 1 auto}.legal-wrap{max-width:820px}.legal-logo{display:inline-block;margin-bottom:42px}.legal h1{font-size:clamp(38px,5vw,58px)}.legal h2{font-size:24px;margin-top:38px}.legal a{color:var(--green)}
+@media(max-width:760px){.brand-logo img{width:250px}.nav .brand-logo img{width:220px}}
