@@ -384,6 +384,34 @@ footer{
 
 }
 
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 17px;
+    margin-bottom: 24px;
+}
+
+.footer-brand img {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+}
+
+.footer-brand strong {
+    display: block;
+    color: #fff;
+    font-family: "Manrope", sans-serif;
+    font-size: 1.55rem;
+    line-height: 1.2;
+}
+
+.footer-brand span {
+    display: block;
+    margin-top: 5px;
+    color: #d9e4ec;
+    font-size: 0.88rem;
+}
+
 /* =============================
    RESPONSIVE
 ============================= */
