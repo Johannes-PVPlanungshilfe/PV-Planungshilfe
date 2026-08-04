@@ -47,3 +47,43 @@ if (form) {
     });
 
 }
+
+/* ==========================================
+   Mobile Navigation
+========================================== */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navigation = document.querySelector(".main-navigation");
+
+if (menuToggle && navigation) {
+
+    menuToggle.addEventListener("click", () => {
+
+        navigation.classList.toggle("open");
+
+        const expanded =
+            navigation.classList.contains("open");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            expanded
+        );
+
+    });
+
+    navigation.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navigation.classList.remove("open");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                false
+            );
+
+        });
+
+    });
+
+}
