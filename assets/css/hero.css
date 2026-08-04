@@ -1,0 +1,155 @@
+/* ==========================================
+   HERO PROFESSIONAL
+========================================== */
+
+.hero{
+
+    min-height:92vh;
+
+    display:flex;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background-image:
+    linear-gradient(
+        rgba(18,59,93,.55),
+        rgba(18,59,93,.35)
+    ),
+    url("../images/hero.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(18,59,93,.75) 0%,
+        rgba(18,59,93,.45) 45%,
+        rgba(18,59,93,.15) 100%
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    color:white;
+
+}
+
+.hero h1{
+
+    color:white;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+}
+
+.hero p{
+
+    color:white;
+
+    font-size:1.25rem;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:55px;
+
+}
+
+.hero-buttons .btn{
+
+    padding:18px 38px;
+
+    font-size:1.05rem;
+
+}
+
+.hero-buttons .btn-secondary{
+
+    background:transparent;
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.hero-buttons .btn-secondary:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+.hero-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    max-width:560px;
+
+}
+
+.hero-feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.hero-feature img{
+
+    width:28px;
+
+    filter:brightness(0) invert(1);
+
+}

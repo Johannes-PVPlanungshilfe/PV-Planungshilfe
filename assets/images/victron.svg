@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 520 150"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Victron Energy ESS</title>
+  <desc id="desc">
+    Neutrale Kennzeichnung für den Bereich Planungshilfe für Victron Energy ESS.
+  </desc>
+
+  <rect
+    x="2"
+    y="2"
+    width="516"
+    height="146"
+    rx="24"
+    fill="#FFFFFF"
+    stroke="#DDE5EA"
+    stroke-width="4"/>
+
+  <circle
+    cx="78"
+    cy="75"
+    r="44"
+    fill="#123B5D"/>
+
+  <path
+    d="M57 52 L78 101 L100 52"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="11"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <circle
+    cx="78"
+    cy="75"
+    r="7"
+    fill="#63B32E"/>
+
+  <text
+    x="145"
+    y="68"
+    font-family="Manrope, Arial, sans-serif"
+    font-size="37"
+    font-weight="800"
+    fill="#123B5D">
+    Victron Energy
+  </text>
+
+  <text
+    x="146"
+    y="105"
+    font-family="Inter, Arial, sans-serif"
+    font-size="24"
+    font-weight="700"
+    fill="#63B32E">
+    ESS Planungshilfe
+  </text>
+
+</svg>

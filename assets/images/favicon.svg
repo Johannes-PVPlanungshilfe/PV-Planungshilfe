@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 128 128">
+
+<path
+d="M30 58
+L64 26
+L98 58"
+fill="none"
+stroke="#123B5D"
+stroke-width="8"
+stroke-linecap="round"/>
+
+<rect
+x="42"
+y="58"
+width="44"
+height="30"
+rx="4"
+fill="#123B5D"/>
+
+<path
+d="M18 102
+C40 114,
+88 114,
+110 102"
+fill="none"
+stroke="#63B32E"
+stroke-width="8"
+stroke-linecap="round"/>
+
+</svg>
