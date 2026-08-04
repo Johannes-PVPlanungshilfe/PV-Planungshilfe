@@ -1,22 +1,54 @@
-# PVPlanungshilfe – Professional Edition
+# PVPlanungshilfe
 
-Statische Unternehmenswebsite für Netlify und GitHub.
+Unternehmenswebsite von PVPlanungshilfe – Inhaber Johannes Ludwig.
 
-## GitHub-Upload
+## Kontaktdaten
 
-1. ZIP entpacken.
-2. Den **Inhalt** des Ordners hochladen, sodass `index.html` direkt im Hauptverzeichnis des Repositories liegt.
-3. Commit-Nachricht: `Professional Edition v2.0`.
-4. Netlify veröffentlicht den Commit automatisch.
+PVPlanungshilfe  
+Inhaber Johannes Ludwig  
+Hopfengarten 17  
+37235 Hessisch Lichtenau  
 
-## Technik
+Telefon: 05602 919221  
+E-Mail: info@pvplanungshilfe.de  
 
-- HTML, CSS und JavaScript ohne Build-Schritt
-- Formspree-Endpunkt: `https://formspree.io/f/meeybeer`
-- Telefonnummer: `05602 919221`
-- E-Mail: `info@pvplanungshilfe.de`
-- Lokale SVG-Grafiken; keine externen Logo- oder Icon-Dateien
+## Projektstruktur
 
-## Wichtiger Hinweis
-
-Impressum und Datenschutz wurden passend zu den bekannten Angaben und eingebauten Diensten erstellt. Bei steuerlichen, berufsrechtlichen oder technischen Änderungen müssen die Texte angepasst und gegebenenfalls rechtlich geprüft werden.
+```text
+/
+├── index.html
+├── impressum.html
+├── datenschutz.html
+├── danke.html
+├── 404.html
+├── robots.txt
+├── sitemap.xml
+├── manifest.webmanifest
+├── netlify.toml
+│
+└── assets/
+    ├── css/
+    │   ├── base.css
+    │   ├── layout.css
+    │   ├── components.css
+    │   └── responsive.css
+    │
+    ├── js/
+    │   └── app.js
+    │
+    ├── images/
+    │   ├── hero.webp
+    │   ├── johannes.webp
+    │   ├── logo.svg
+    │   ├── logo-white.svg
+    │   ├── favicon.svg
+    │   └── victron.svg
+    │
+    └── icons/
+        ├── check.svg
+        ├── solar.svg
+        ├── battery.svg
+        ├── home.svg
+        ├── phone.svg
+        ├── mail.svg
+        └── location.svg
