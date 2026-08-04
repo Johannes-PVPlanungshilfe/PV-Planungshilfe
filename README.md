@@ -1,41 +1,22 @@
-# PV Planungshilfe
+# PVPlanungshilfe – Professional Edition
 
-Website von **PV Planungshilfe – Inhaber Johannes Ludwig**.
+Statische Unternehmenswebsite für Netlify und GitHub.
 
-## Kontaktdaten
+## GitHub-Upload
 
-- Telefon: 05602 919221
-- E-Mail: info@pvplanungshilfe.de
-- Anschrift: Hopfengarten 17, 37235 Hessisch Lichtenau
-- Domain: https://pvplanungshilfe.de
+1. ZIP entpacken.
+2. Den **Inhalt** des Ordners hochladen, sodass `index.html` direkt im Hauptverzeichnis des Repositories liegt.
+3. Commit-Nachricht: `Professional Edition v2.0`.
+4. Netlify veröffentlicht den Commit automatisch.
 
-## Veröffentlichung über GitHub und Netlify
+## Technik
 
-1. ZIP-Datei entpacken.
-2. Im GitHub-Repository `Johannes-PVPlanungshilfe/PV-Planungshilfe` auf **Add file → Upload files** klicken.
-3. Alle Dateien und Ordner aus diesem Projekt hochladen. Wichtig: `index.html` muss direkt im Hauptverzeichnis liegen.
-4. Unten eine Commit-Nachricht eingeben, z. B. `Website Version 1.0`, und **Commit changes** auswählen.
-5. In Netlify **Add new site → Import an existing project → GitHub** wählen.
-6. Das Repository `PV-Planungshilfe` auswählen.
-7. Build command leer lassen; Publish directory ebenfalls leer lassen oder `.` verwenden.
-8. Deploy starten und anschließend `pvplanungshilfe.de` als bestehende Domain zuordnen.
+- HTML, CSS und JavaScript ohne Build-Schritt
+- Formspree-Endpunkt: `https://formspree.io/f/meeybeer`
+- Telefonnummer: `05602 919221`
+- E-Mail: `info@pvplanungshilfe.de`
+- Lokale SVG-Grafiken; keine externen Logo- oder Icon-Dateien
 
-## Kontaktformular
+## Wichtiger Hinweis
 
-Das Formular nutzt Formspree mit dem Endpunkt `https://formspree.io/f/meeybeer`. Änderungen am Formspree-Konto werden nicht über dieses Repository verwaltet.
-
-## Dateien
-
-- `index.html`: Startseite
-- `styles.css`: Design
-- `script.js`: Navigation und Formularstatus
-- `impressum.html`: Anbieterkennzeichnung
-- `datenschutz.html`: Datenschutzhinweise
-- `danke.html`: Bestätigung nach Kontaktanfrage
-- `sitemap.xml` und `robots.txt`: SEO
-- `netlify.toml`: Netlify-Header und Weiterleitungen
-- `assets/`: Logo, Bilder und Favicons
-
-## Spätere Änderungen
-
-Änderungen können direkt in GitHub vorgenommen werden. Nach jedem Commit veröffentlicht Netlify die neue Version automatisch.
+Impressum und Datenschutz wurden passend zu den bekannten Angaben und eingebauten Diensten erstellt. Bei steuerlichen, berufsrechtlichen oder technischen Änderungen müssen die Texte angepasst und gegebenenfalls rechtlich geprüft werden.
