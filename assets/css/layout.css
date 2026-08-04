@@ -277,26 +277,26 @@ nav a:hover::after{
    ABOUT
 ============================= */
 
-.about{
-
-    align-items:center;
-
-}
-
-.about-image{
-
-    display:flex;
-    justify-content:center;
+.about {
+    grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.45fr);
+    align-items: center;
+    gap: 90px;
 
 }
 
-.about-image img{
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    width:170px;
-
-    border-radius:24px;
-
-    box-shadow:var(--shadow);
+.about-image img {
+    width: min(100%, 330px);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: 26px;
+    box-shadow: 0 22px 50px rgba(18, 59, 93, 0.16);
 
 }
 
