@@ -38,40 +38,48 @@ header{
 
 .logo{
 
-    display:flex;
-    align-items:center;
-    gap:14px;
-
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
 }
 
-.logo img{
-
-    width:52px;
-    height:52px;
-    object-fit:contain;
-
+.logo .brand-mark {
+    width: 68px;
+    height: 68px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
-.logo-text{
-
-    display:flex;
-    flex-direction:column;
-
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
 }
 
-.logo-title{
-
-    font-family:'Manrope',sans-serif;
-    font-size:1.35rem;
-    font-weight:800;
-    color:var(--primary);
-
+.logo-title {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--primary);
+    white-space: nowrap;
 }
 
-.logo-subtitle{
+.logo-subtitle {
+    margin-top: 5px;
+    font-size: 0.84rem;
+    color: #71808c;
+    white-space: nowrap;
+}
 
-    font-size:.82rem;
-    color:#71808C;
+.header-container {
+    width: min(1240px, 94%);
+    min-height: 96px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
 
 }
 
