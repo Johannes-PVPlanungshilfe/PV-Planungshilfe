@@ -194,54 +194,43 @@
 
 /* ---------- Victron ---------- */
 
-.victron-box{
-
-    background:#fff;
-
-    border-radius:26px;
-
-    padding:60px;
-
-    display:grid;
-
-    grid-template-columns:220px 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-    box-shadow:var(--shadow);
-
+.victron-box {
+    background: #fff;
+    border-radius: 28px;
+    padding: 60px 70px;
+    display: grid;
+    grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1.6fr);
+    gap: 70px;
+    align-items: center;
+    box-shadow: var(--shadow);
 }
 
-.victron-box img{
-
-    width:180px;
-
+.victron-box > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.victron-box ul{
-
-    margin-top:24px;
-
+.victron-logo {
+    width: min(100%, 320px);
+    height: auto;
+    object-fit: contain;
 }
 
-.victron-box li{
-
-    margin-bottom:14px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
+.victron-box ul {
+    margin-top: 25px;
 }
 
-.victron-box li img{
+.victron-box li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+}
 
-    width:18px;
-
+.victron-box li img {
+    width: 18px;
+    height: 18px;
 }
 
 /* ---------- FAQ ---------- */
