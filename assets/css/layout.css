@@ -1,6 +1,7 @@
 /* ==========================================================
    PVPlanungshilfe
-   layout.css – korrigierte vollständige Ersatzdatei
+   layout.css – finale Header-Korrektur
+   Vollständige Ersatzdatei
 ========================================================== */
 
 /* =============================
@@ -21,13 +22,13 @@ header {
 }
 
 .header-container {
-    width: min(1360px, 94%);
-    min-height: 92px;
+    width: min(1380px, 94%);
+    min-height: 88px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto minmax(430px, 1fr) auto;
+    grid-template-columns: 320px minmax(460px, 1fr) 320px;
     align-items: center;
-    gap: 34px;
+    column-gap: 24px;
 }
 
 /* Marke links */
@@ -36,15 +37,15 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 14px;
-    min-width: 0;
-    flex-shrink: 0;
+    width: max-content;
+    max-width: 100%;
 }
 
 .logo .brand-mark {
-    width: 62px;
-    height: 62px;
+    width: 68px;
+    height: 68px;
     object-fit: contain;
-    flex: 0 0 62px;
+    flex: 0 0 68px;
 }
 
 .logo-text {
@@ -57,7 +58,7 @@ header {
 .logo-title {
     color: var(--primary);
     font-family: "Manrope", sans-serif;
-    font-size: 1.38rem;
+    font-size: 1.42rem;
     font-weight: 800;
     white-space: nowrap;
 }
@@ -69,10 +70,11 @@ header {
     white-space: nowrap;
 }
 
-/* Navigation mittig */
+/* Navigation exakt mittig */
 
 .main-navigation {
     min-width: 0;
+    justify-self: center;
 }
 
 .main-navigation ul,
@@ -80,7 +82,7 @@ nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(20px, 2.2vw, 38px);
+    gap: clamp(24px, 2.4vw, 40px);
     margin: 0;
     padding: 0;
 }
@@ -130,7 +132,7 @@ nav a:hover::after {
     align-items: center;
     justify-content: flex-end;
     gap: 18px;
-    flex-shrink: 0;
+    min-width: 0;
 }
 
 .phone {
@@ -143,8 +145,6 @@ nav a:hover::after {
     padding: 14px 24px;
     white-space: nowrap;
 }
-
-/* Wird erst mobil eingeblendet */
 
 .menu-toggle {
     display: none;
@@ -328,8 +328,6 @@ footer {
     width: 82px;
     height: 82px;
     object-fit: contain;
-
-    /* Macht das bisherige dunkle Favicon im Footer komplett weiß sichtbar */
     filter: brightness(0) invert(1);
 }
 
