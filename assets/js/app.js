@@ -1,89 +1,153 @@
-/* ==========================================
+/* ==========================================================
+   PVPlanungshilfe Professional Edition
+   app.js
+========================================================== */
+
+/* ------------------------------
    Kontaktformular (Formspree)
-========================================== */
+------------------------------ */
 
 const form = document.querySelector(".contact-form");
 
 if (form) {
+    const status = document.querySelector(".form-status");
 
-    form.addEventListener("submit", async function (e) {
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-        e.preventDefault();
-
-        const button = form.querySelector("button");
+        const button = form.querySelector('button[type="submit"]');
 
         button.disabled = true;
-        button.innerHTML = "Nachricht wird gesendet...";
+        button.textContent = "Nachricht wird gesendet...";
 
-        const data = new FormData(form);
-
-        const response = await fetch(form.action, {
-
-            method: "POST",
-
-            body: data,
-
-            headers: {
-
-                Accept: "application/json"
-
-            }
-
-        });
-
-        if (response.ok) {
-
-            window.location.href = "danke.html";
-
-        } else {
-
-            alert("Leider konnte Ihre Nachricht nicht versendet werden. Bitte versuchen Sie es erneut.");
-
-            button.disabled = false;
-            button.innerHTML = "Anfrage senden";
-
+        if (status) {
+            status.textContent = "";
+            status.className = "form-status";
         }
 
-    });
+        try {
+            const response = await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
 
+            if (!response.ok) {
+                throw new Error("Formular konnte nicht gesendet werden.");
+            }
+
+            form.reset();
+            window.location.href = "danke.html";
+        } catch (error) {
+            if (status) {
+                status.textContent =
+                    "Die Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut.";
+                status.classList.add("is-error");
+            } else {
+                alert(
+                    "Die Nachricht konnte leider nicht gesendet werden. Bitte versuchen Sie es erneut."
+                );
+            }
+        } finally {
+            button.disabled = false;
+            button.textContent = "Anfrage senden";
+        }
+    });
 }
 
-/* ==========================================
+/* ------------------------------
    Mobile Navigation
-========================================== */
+------------------------------ */
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navigation = document.querySelector(".main-navigation");
 
 if (menuToggle && navigation) {
-
     menuToggle.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
 
-        navigation.classList.toggle("open");
-
-        const expanded =
-            navigation.classList.contains("open");
-
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.setAttribute(
-            "aria-expanded",
-            expanded
+            "aria-label",
+            isOpen ? "Navigation schließen" : "Navigation öffnen"
         );
-
     });
 
-    navigation.querySelectorAll("a").forEach(link => {
-
+    navigation.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
-
             navigation.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Navigation öffnen");
+        });
+    });
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                false
-            );
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 1100) {
+            navigation.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Navigation öffnen");
+        }
+    });
+}
 
+/* ------------------------------
+   FAQ
+------------------------------ */
+
+document.querySelectorAll(".faq-item").forEach((item) => {
+    const button = item.querySelector(".faq-question");
+
+    if (!button) {
+        return;
+    }
+
+    button.addEventListener("click", () => {
+        const wasOpen = item.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach((otherItem) => {
+            otherItem.classList.remove("active");
+
+            const otherButton = otherItem.querySelector(".faq-question");
+
+            if (otherButton) {
+                otherButton.setAttribute("aria-expanded", "false");
+            }
         });
 
+        if (!wasOpen) {
+            item.classList.add("active");
+            button.setAttribute("aria-expanded", "true");
+        }
     });
+});
 
+/* ------------------------------
+   Scroll-Animationen
+------------------------------ */
+
+const revealElements = document.querySelectorAll(
+    ".service-card, .process-card, .highlight-box, .victron-box, .contact-box, .about"
+);
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+    revealElements.forEach((element) => {
+        element.classList.add("reveal-hidden");
+        observer.observe(element);
+    });
 }
