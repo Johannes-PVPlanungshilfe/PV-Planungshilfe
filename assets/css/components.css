@@ -1,8 +1,11 @@
 /* ==========================================================
-   PVPlanungshilfe Professional Edition
-   Components
-   Vollständige Ersatzdatei
+   PVPlanungshilfe
+   components.css – korrigierte vollständige Ersatzdatei
 ========================================================== */
+
+/* =============================
+   LEISTUNGSKARTEN
+============================= */
 
 .service-card {
     height: 100%;
@@ -11,7 +14,10 @@
     border: 1px solid rgba(18, 59, 93, 0.08);
     border-radius: 22px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
 .service-card:hover {
@@ -37,8 +43,17 @@
     object-fit: contain;
 }
 
-.service-card h3 { margin-bottom: 16px; }
-.service-card p { margin-bottom: 0; }
+.service-card h3 {
+    margin-bottom: 16px;
+}
+
+.service-card p {
+    margin-bottom: 0;
+}
+
+/* =============================
+   HIGHLIGHT-BEREICH
+============================= */
 
 .highlight-box {
     padding: 62px;
@@ -50,12 +65,22 @@
     box-shadow: 0 28px 60px rgba(18, 59, 93, 0.2);
 }
 
-.highlight-box h2 { color: #fff; }
+.highlight-box h2 {
+    color: #fff;
+}
+
 .highlight-box p {
     max-width: 880px;
     color: #dce8ef;
 }
-.highlight-box p:last-child { margin-bottom: 0; }
+
+.highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* =============================
+   ÜBER-MICH-BADGE
+============================= */
 
 .about-badge {
     display: inline-flex;
@@ -69,6 +94,10 @@
     font-weight: 800;
 }
 
+/* =============================
+   BERATUNGSABLAUF
+============================= */
+
 .process-card {
     height: 100%;
     padding: 36px 28px;
@@ -77,7 +106,9 @@
     border: 1px solid rgba(18, 59, 93, 0.08);
     border-radius: 22px;
     box-shadow: var(--shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .process-card:hover {
@@ -101,13 +132,22 @@
     box-shadow: 0 10px 25px rgba(99, 179, 46, 0.25);
 }
 
-.process-card h3 { margin-bottom: 14px; }
-.process-card p { margin-bottom: 0; }
+.process-card h3 {
+    margin-bottom: 14px;
+}
+
+.process-card p {
+    margin-bottom: 0;
+}
+
+/* =============================
+   VICTRON-BEREICH
+============================= */
 
 .victron-box {
     padding: 60px 70px;
     display: grid;
-    grid-template-columns: minmax(240px, 0.68fr) minmax(0, 1.55fr);
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.55fr);
     gap: 72px;
     align-items: center;
     background: #fff;
@@ -116,6 +156,7 @@
     box-shadow: var(--shadow);
 }
 
+.victron-box > div:first-child,
 .victron-logo-wrap {
     display: flex;
     align-items: center;
@@ -124,13 +165,18 @@
 }
 
 .victron-logo {
-    width: min(100%, 330px);
+    width: min(100%, 360px);
     height: auto;
     object-fit: contain;
 }
 
-.victron-box h3 { margin-bottom: 18px; }
-.victron-box ul { margin-top: 24px; }
+.victron-box h3 {
+    margin-bottom: 18px;
+}
+
+.victron-box ul {
+    margin-top: 24px;
+}
 
 .victron-box li {
     margin-bottom: 15px;
@@ -141,13 +187,19 @@
     font-weight: 600;
 }
 
-.victron-box li:last-child { margin-bottom: 0; }
+.victron-box li:last-child {
+    margin-bottom: 0;
+}
 
 .victron-box li img {
     width: 18px;
     height: 18px;
     flex-shrink: 0;
 }
+
+/* =============================
+   FAQ
+============================= */
 
 .faq-item {
     margin-bottom: 18px;
@@ -173,15 +225,26 @@
     transition: background 0.25s ease;
 }
 
-.faq-question:hover { background: #f7fafb; }
+.faq-question:hover {
+    background: #f7fafb;
+}
 
 .faq-answer {
     display: none;
     padding: 0 30px 28px;
 }
 
-.faq-answer p { margin-bottom: 0; }
-.faq-item.active .faq-answer { display: block; }
+.faq-answer p {
+    margin-bottom: 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* =============================
+   KONTAKTBEREICH
+============================= */
 
 .contact-box {
     padding: 60px;
@@ -222,7 +285,13 @@
     color: var(--primary);
 }
 
-.contact-item p { margin-bottom: 0; }
+.contact-item p {
+    margin-bottom: 0;
+}
+
+/* =============================
+   KONTAKTFORMULAR
+============================= */
 
 .contact-form {
     display: flex;
@@ -230,7 +299,9 @@
     gap: 20px;
 }
 
-.contact-form label:not(.checkbox) { display: block; }
+.contact-form label:not(.checkbox) {
+    display: block;
+}
 
 .contact-form input,
 .contact-form textarea,
@@ -242,7 +313,9 @@
     background: #fff;
     color: var(--dark);
     font-size: 1rem;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .contact-form input:focus,
@@ -282,7 +355,9 @@
     text-underline-offset: 2px;
 }
 
-.checkbox a:hover { color: var(--primary); }
+.checkbox a:hover {
+    color: var(--primary);
+}
 
 .contact-form button[disabled] {
     cursor: wait;
@@ -295,13 +370,24 @@
     font-weight: 700;
 }
 
-.form-status.is-success { color: #2f7a1d; }
-.form-status.is-error { color: #a83232; }
+.form-status.is-success {
+    color: #2f7a1d;
+}
+
+.form-status.is-error {
+    color: #a83232;
+}
+
+/* =============================
+   ANIMATIONEN
+============================= */
 
 .reveal-hidden {
     opacity: 0;
     transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
 }
 
 .reveal-visible {

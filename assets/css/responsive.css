@@ -1,221 +1,396 @@
 /* ==========================================================
-   PVPlanungshilfe Professional Edition
-   Responsive
-   Vollständige Ersatzdatei
+   PVPlanungshilfe
+   responsive.css – korrigierte vollständige Ersatzdatei
 ========================================================== */
 
-.menu-toggle{
-    display:none;
-    width:48px;
-    height:48px;
-    padding:11px;
-    border:1px solid var(--border);
-    border-radius:12px;
-    background:#fff;
-    flex-direction:column;
-    justify-content:center;
-    gap:6px;
-    cursor:pointer;
+/* =============================
+   MOBILE MENU BUTTON
+============================= */
+
+.menu-toggle {
+    display: none;
+    width: 46px;
+    height: 46px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 
-.menu-toggle span{
-    display:block;
-    width:100%;
-    height:2px;
-    border-radius:99px;
-    background:var(--primary);
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--primary);
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
-@media (max-width:1100px){
+/* =============================
+   DESKTOP / SMALL NOTEBOOK
+============================= */
 
-    .header-container{
-        min-height:84px;
+@media (max-width: 1260px) {
+
+    .header-container {
+        width: min(1180px, 94%);
+        grid-template-columns: auto minmax(360px, 1fr) auto;
+        gap: 24px;
     }
 
-    .header-contact{
-        display:none;
+    .logo .brand-mark {
+        width: 56px;
+        height: 56px;
+        flex-basis: 56px;
     }
 
-    .menu-toggle{
-        display:flex;
-        margin-left:auto;
+    .logo-title {
+        font-size: 1.25rem;
     }
 
-    .main-navigation{
-        display:none;
-        position:absolute;
-        top:100%;
-        left:0;
-        right:0;
-        background:#fff;
-        border-top:1px solid var(--border);
-        box-shadow:0 18px 40px rgba(18,59,93,.12);
-        padding:20px 5%;
+    .logo-subtitle {
+        font-size: 0.76rem;
     }
 
-    .main-navigation.open{
-        display:block;
+    .main-navigation ul {
+        gap: 22px;
     }
 
-    .main-navigation ul{
-        display:flex;
-        flex-direction:column;
-        gap:0;
+    .main-navigation a {
+        font-size: 0.95rem;
     }
 
-    .main-navigation li{
-        border-bottom:1px solid var(--border);
+    .header-contact {
+        gap: 14px;
     }
 
-    .main-navigation a{
-        display:block;
-        padding:15px 0;
+    .header-contact .btn {
+        padding: 13px 20px;
+        font-size: 0.95rem;
+    }
+
+    .phone {
+        font-size: 0.95rem;
+    }
+}
+
+/* =============================
+   TABLET / MOBILE NAVIGATION
+============================= */
+
+@media (max-width: 1080px) {
+
+    .site-header,
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    .header-container {
+        position: relative;
+        width: 92%;
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+    }
+
+    .logo {
+        gap: 12px;
+    }
+
+    .logo .brand-mark {
+        width: 52px;
+        height: 52px;
+        flex-basis: 52px;
+    }
+
+    .logo-title {
+        font-size: 1.16rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.72rem;
+    }
+
+    .header-contact {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .main-navigation {
+        position: absolute;
+        top: 100%;
+        left: -4.35%;
+        right: -4.35%;
+        display: none;
+        padding: 16px 5% 22px;
+        background: #fff;
+        border-top: 1px solid var(--border);
+        box-shadow: 0 20px 35px rgba(18, 59, 93, 0.12);
+    }
+
+    .main-navigation.open {
+        display: block;
+    }
+
+    .main-navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .main-navigation li {
+        width: 100%;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .main-navigation li:last-child {
+        border-bottom: 0;
+    }
+
+    .main-navigation a {
+        display: block;
+        width: 100%;
+        padding: 15px 2px;
+        font-size: 1rem;
+    }
+
+    .main-navigation a::after {
+        display: none;
     }
 
     .hero-container,
-    .about,
     .grid-2,
     .grid-3,
     .grid-4,
+    .about,
     .victron-box,
     .contact-grid,
-    .footer-container{
-        grid-template-columns:1fr;
+    .footer-container {
+        grid-template-columns: 1fr;
     }
 
-    .hero-container{
-        gap:50px;
+    .hero-container {
+        gap: 50px;
     }
 
-    .hero-image{
-        order:-1;
+    .hero-image {
+        order: -1;
     }
 
-    .about{
-        gap:40px;
+    .hero-image img {
+        aspect-ratio: 16 / 9;
     }
 
-    .about-image{
-        justify-content:flex-start;
+    .about {
+        gap: 42px;
+        text-align: left;
     }
 
-    .about-image img{
-        width:min(100%,300px);
+    .about-image {
+        justify-content: flex-start;
     }
 
-    .victron-box{
-        padding:42px 30px;
-        gap:36px;
+    .about-image img {
+        width: min(100%, 310px);
     }
 
-    .victron-logo{
-        width:min(100%,280px);
+    .victron-box {
+        padding: 42px 32px;
+        gap: 34px;
+        text-align: left;
     }
 
-    .footer-container{
-        gap:40px;
+    .victron-logo-wrap {
+        min-height: 0;
+        justify-content: flex-start;
+    }
+
+    .victron-logo {
+        width: min(100%, 290px);
+    }
+
+    .footer-container {
+        gap: 40px;
+        text-align: left;
+    }
+
+    .footer-links {
+        align-items: flex-start;
     }
 }
 
-@media (max-width:768px){
+/* =============================
+   SMARTPHONE
+============================= */
 
-    section{
-        padding:70px 0;
+@media (max-width: 720px) {
+
+    section {
+        padding: 72px 0;
     }
 
-    .header-container{
-        width:92%;
-        min-height:76px;
+    .header-container {
+        min-height: 74px;
     }
 
-    .logo .brand-mark{
-        width:50px;
-        height:50px;
+    .logo .brand-mark {
+        width: 46px;
+        height: 46px;
+        flex-basis: 46px;
     }
 
-    .logo-title{
-        font-size:1.08rem;
+    .logo-title {
+        font-size: 1.03rem;
     }
 
-    .logo-subtitle{
-        font-size:.68rem;
+    .logo-subtitle {
+        font-size: 0.66rem;
     }
 
-    h1{
-        font-size:clamp(2.1rem,9vw,2.9rem);
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
     }
 
-    h2{
-        font-size:clamp(1.7rem,7vw,2.2rem);
+    h1 {
+        font-size: clamp(2.05rem, 9vw, 2.8rem);
     }
 
-    .hero{
-        padding:55px 0 70px;
+    h2 {
+        font-size: clamp(1.7rem, 7.5vw, 2.2rem);
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    .hero {
+        padding: 54px 0 70px;
     }
 
-    .hero-buttons .btn{
-        width:100%;
+    .hero-buttons {
+        flex-direction: column;
     }
 
-    .trust{
-        flex-direction:column;
-        gap:16px;
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .trust {
+        flex-direction: column;
+        gap: 16px;
     }
 
     .service-card,
-    .process-card,
+    .process-card {
+        padding: 30px 24px;
+    }
+
     .highlight-box,
-    .contact-box{
-        padding:28px 22px;
+    .contact-box {
+        padding: 36px 24px;
     }
 
-    .victron-box{
-        padding:30px 22px;
+    .about-image img {
+        width: min(100%, 285px);
     }
 
-    .footer-brand img{
-        width:66px;
-        height:66px;
+    .about-badge {
+        font-size: 0.82rem;
+        line-height: 1.4;
     }
 
-    .footer-brand strong{
-        font-size:1.25rem;
+    .victron-box {
+        padding: 32px 24px;
+    }
+
+    .footer-brand {
+        align-items: flex-start;
+    }
+
+    .footer-brand img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-brand strong {
+        font-size: 1.28rem;
+    }
+
+    .footer-bottom {
+        padding: 18px 5%;
+        font-size: 0.84rem;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 16px 24px;
     }
 }
 
-@media (max-width:480px){
+/* =============================
+   KLEINE SMARTPHONES
+============================= */
 
-    .logo{
-        gap:10px;
+@media (max-width: 460px) {
+
+    .logo {
+        gap: 9px;
     }
 
-    .logo .brand-mark{
-        width:44px;
-        height:44px;
+    .logo .brand-mark {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
     }
 
-    .logo-title{
-        font-size:.98rem;
+    .logo-title {
+        font-size: 0.96rem;
     }
 
-    .logo-subtitle{
-        display:none;
+    .logo-subtitle {
+        display: none;
     }
 
-    .about-image img{
-        width:min(100%,260px);
+    .hero-container {
+        width: 92%;
     }
 
-    .contact-item{
-        align-items:flex-start;
+    .about-image img {
+        width: min(100%, 260px);
     }
 
-    .contact-item img{
-        width:22px;
-        height:22px;
+    .footer-brand {
+        gap: 13px;
+    }
+
+    .footer-brand img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .footer-brand strong {
+        font-size: 1.15rem;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+    }
+
+    .contact-item img {
+        width: 22px;
+        height: 22px;
     }
 }

@@ -1,7 +1,6 @@
 /* ==========================================================
-   PVPlanungshilfe Professional Edition
-   Layout
-   Vollständige Ersatzdatei
+   PVPlanungshilfe
+   layout.css – korrigierte vollständige Ersatzdatei
 ========================================================== */
 
 /* =============================
@@ -14,74 +13,90 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(18, 59, 93, 0.08);
+    box-shadow: 0 4px 18px rgba(18, 59, 93, 0.05);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(18, 59, 93, 0.08);
-    transition: box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .header-container {
-    width: min(1240px, 94%);
-    min-height: 96px;
+    width: min(1360px, 94%);
+    min-height: 92px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(430px, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
-    gap: 28px;
+    gap: 34px;
 }
+
+/* Marke links */
 
 .logo {
     display: inline-flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
+    min-width: 0;
     flex-shrink: 0;
 }
 
 .logo .brand-mark {
-    width: 68px;
-    height: 68px;
+    width: 62px;
+    height: 62px;
     object-fit: contain;
-    flex-shrink: 0;
+    flex: 0 0 62px;
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
+    min-width: 0;
+    line-height: 1.15;
 }
 
 .logo-title {
-    font-family: "Manrope", sans-serif;
-    font-size: 1.45rem;
-    font-weight: 800;
     color: var(--primary);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.38rem;
+    font-weight: 800;
     white-space: nowrap;
 }
 
 .logo-subtitle {
     margin-top: 5px;
-    font-size: 0.84rem;
     color: #71808c;
+    font-size: 0.82rem;
     white-space: nowrap;
 }
 
-/* =============================
-   NAVIGATION
-============================= */
+/* Navigation mittig */
+
+.main-navigation {
+    min-width: 0;
+}
 
 .main-navigation ul,
 nav ul {
     display: flex;
     align-items: center;
-    gap: 34px;
+    justify-content: center;
+    gap: clamp(20px, 2.2vw, 38px);
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation li,
+nav li {
+    flex: 0 0 auto;
 }
 
 .main-navigation a,
 nav a {
     position: relative;
+    display: inline-block;
     color: var(--primary);
     font-weight: 700;
+    white-space: nowrap;
     transition: color 0.25s ease;
 }
 
@@ -108,10 +123,13 @@ nav a:hover::after {
     width: 100%;
 }
 
+/* Telefon + Button rechts */
+
 .header-contact {
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 18px;
     flex-shrink: 0;
 }
 
@@ -122,9 +140,11 @@ nav a:hover::after {
 }
 
 .header-contact .btn {
-    padding: 14px 25px;
+    padding: 14px 24px;
     white-space: nowrap;
 }
+
+/* Wird erst mobil eingeblendet */
 
 .menu-toggle {
     display: none;
@@ -135,7 +155,7 @@ nav a:hover::after {
 ============================= */
 
 .hero {
-    padding: 90px 0 110px;
+    padding: 86px 0 108px;
     background:
         radial-gradient(circle at 18% 18%, rgba(99, 179, 46, 0.08), transparent 34%),
         linear-gradient(180deg, #f8fafb 0%, #ffffff 100%);
@@ -145,8 +165,8 @@ nav a:hover::after {
     width: min(1240px, 94%);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr);
-    gap: 76px;
+    grid-template-columns: minmax(0, 1fr) minmax(430px, 0.95fr);
+    gap: 72px;
     align-items: center;
 }
 
@@ -180,7 +200,11 @@ nav a:hover::after {
     inset: 22px -18px -22px 18px;
     z-index: 0;
     border-radius: 30px;
-    background: linear-gradient(135deg, rgba(18, 59, 93, 0.12), rgba(99, 179, 46, 0.08));
+    background: linear-gradient(
+        135deg,
+        rgba(18, 59, 93, 0.12),
+        rgba(99, 179, 46, 0.08)
+    );
 }
 
 .hero-image img {
@@ -236,13 +260,13 @@ nav a:hover::after {
 }
 
 /* =============================
-   ABOUT
+   ÜBER MICH
 ============================= */
 
 .about {
-    grid-template-columns: minmax(280px, 0.78fr) minmax(0, 1.45fr);
+    grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.45fr);
     align-items: center;
-    gap: 90px;
+    gap: 88px;
 }
 
 .about-image {
@@ -252,7 +276,7 @@ nav a:hover::after {
 }
 
 .about-image img {
-    width: min(100%, 330px);
+    width: min(100%, 350px);
     aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: center 34%;
@@ -277,7 +301,7 @@ footer {
 .footer-container {
     width: min(1240px, 94%);
     margin: 0 auto;
-    padding: 72px 0 58px;
+    padding: 70px 0 56px;
     display: grid;
     grid-template-columns: minmax(0, 1.7fr) minmax(180px, 0.75fr) minmax(180px, 0.75fr);
     gap: 64px;
@@ -304,6 +328,9 @@ footer {
     width: 82px;
     height: 82px;
     object-fit: contain;
+
+    /* Macht das bisherige dunkle Favicon im Footer komplett weiß sichtbar */
+    filter: brightness(0) invert(1);
 }
 
 .footer-brand strong {
@@ -345,7 +372,7 @@ footer {
 }
 
 /* =============================
-   UTILITY
+   ACCESSIBILITY
 ============================= */
 
 .sr-only {
